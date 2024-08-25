@@ -1,14 +1,14 @@
 import java.util.*;
 public class email {
-    private String firstname;
-    private String lastname;
-    private String password;
-    private String department;
-    private int mailboxCapacity = 500;
-    private int defaultPasswordLength = 10;
-    private String alternateEmail;
-    private String company = "google.com";
-    private String email;
+    public String firstname;
+    public String lastname;
+    public String password;
+    public String department;
+    public int mailboxCapacity = 500;
+    public int defaultPasswordLength = 10;
+    public String alternateEmail;
+    public String company = "google.com";
+    public String email;
 
     // Constructor
     public email(String firstname, String lastname) {
@@ -22,7 +22,7 @@ public class email {
     }
 
     // Set department
-    private String setDepartment() {
+    public String setDepartment() {
         System.out.println("Enter the department\n1: Sales\n2: Development\n3: Accounting");
         Scanner sc = new Scanner(System.in);
         int ch = sc.nextInt();
@@ -38,7 +38,7 @@ public class email {
     }
 
     // Generate random password
-    private String generateRandomPassword(int length) {
+    public String generateRandomPassword(int length) {
         String passwordSet = "QWERTYUIOPLKJHGFDSAZXCVBNM1234567890@#";
         char[] password = new char[length];
         for (int i = 0; i < length; i++) {
@@ -49,7 +49,7 @@ public class email {
     }
 
     // Generate email address
-    private String generateEmailAddress() {
+    public String generateEmailAddress() {
         return firstname.toLowerCase() + "." + lastname.toLowerCase() + "@" + department + "." + company;
     }
 
